@@ -27,6 +27,10 @@ return {
       },
     },
   },
+  {
+    "github/copilot.vim",
+    lazy = false,
+  },
   --
   {
     "nvim-treesitter/nvim-treesitter",
