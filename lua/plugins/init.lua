@@ -1,20 +1,20 @@
 return {
   {
     "stevearc/conform.nvim",
-    event = 'BufWritePre', -- uncomment for format on save
+    event = "BufWritePre", -- uncomment for format on save
     config = function()
       require "configs.conform"
     end,
   },
 
   -- These are some examples, uncomment them if you want to see them work!
-   {
-     "neovim/nvim-lspconfig",
-     config = function()
-       require("nvchad.configs.lspconfig").defaults()
-       require "configs.lspconfig"
-     end,
-   },
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      require("nvchad.configs.lspconfig").defaults()
+      require "configs.lspconfig"
+    end,
+  },
   -- 管理插件
   {
     "williamboman/mason.nvim",
@@ -22,17 +22,19 @@ return {
       ensure_installed = {
         "lua-language-server",
         "html-lsp",
+        "css-lsp",
+        "json-lsp",
         "prettier",
         "stylua",
-        "eslint",
-        "jsx",
-        "typescript"
+        "typescript-language-server",
+        "ast-grep"
       },
     },
   },
   {
     "github/copilot.vim",
     lazy = false,
+    after = "nvim-cmp"
   },
   {
     "easymotion/vim-easymotion",
@@ -63,8 +65,13 @@ return {
         "markdown",
         -- low level
         "c",
-        "zig"
-      }
+        "zig",
+      },
+      -- 启用代码高亮模块
+      highlight = {
+        enable = true,
+        additional_vim_regex_highlighting = false,
+      },
     },
   },
 }

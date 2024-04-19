@@ -34,7 +34,7 @@ dofile(vim.g.base46_cache .. "statusline")
 
 require "nvchad.autocmds"
 vim.cmd [[
-  autocmd InsertLeave,TextChanged * if &buftype != 'nofile' | silent write | endif
+  autocmd InsertLeave,TextChanged * if &buftype == '' | silent write | endif
 ]]
 
 vim.schedule(function()
