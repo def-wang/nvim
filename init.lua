@@ -33,6 +33,9 @@ dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
 
 require "nvchad.autocmds"
+vim.cmd [[
+  autocmd InsertLeave,TextChanged * if &buftype != 'nofile' | silent write | endif
+]]
 
 vim.schedule(function()
   require "mappings"

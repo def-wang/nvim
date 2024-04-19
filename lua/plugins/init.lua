@@ -1,7 +1,7 @@
 return {
   {
     "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
+    event = 'BufWritePre', -- uncomment for format on save
     config = function()
       require "configs.conform"
     end,
@@ -15,7 +15,7 @@ return {
        require "configs.lspconfig"
      end,
    },
-  --
+  -- 管理插件
   {
     "williamboman/mason.nvim",
     opts = {
@@ -23,7 +23,10 @@ return {
         "lua-language-server",
         "html-lsp",
         "prettier",
-        "stylua"
+        "stylua",
+        "eslint",
+        "jsx",
+        "typescript"
       },
     },
   },
@@ -31,7 +34,11 @@ return {
     "github/copilot.vim",
     lazy = false,
   },
-  --
+  {
+    "easymotion/vim-easymotion",
+    lazy = false,
+  },
+  -- 语法高亮
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
@@ -57,7 +64,7 @@ return {
         -- low level
         "c",
         "zig"
-      },
+      }
     },
   },
 }
