@@ -27,14 +27,14 @@ return {
         "prettier",
         "stylua",
         "typescript-language-server",
-        "ast-grep"
+        "emmet-ls",
+        "tailwindcss-language-server",
       },
     },
   },
   {
     "github/copilot.vim",
     lazy = false,
-    after = "nvim-cmp"
   },
   {
     "easymotion/vim-easymotion",
@@ -69,7 +69,6 @@ return {
       },
       -- 启用代码高亮模块
       highlight = {
-        enable = true,
         additional_vim_regex_highlighting = false,
       },
     },
