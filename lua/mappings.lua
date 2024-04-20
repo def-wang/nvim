@@ -6,7 +6,7 @@ local map = vim.keymap.set
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jj", "<ESC>")
-
+map("n", "<CR>", "o", { desc = "Open new line below" })
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
 map("n", "<C-f>", "<cmd>Telescope find_files<cr>", { desc = "Telescope Find files" })

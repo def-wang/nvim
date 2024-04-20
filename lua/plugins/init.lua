@@ -29,8 +29,16 @@ return {
         "typescript-language-server",
         "emmet-ls",
         "tailwindcss-language-server",
+        "pyright",
+        "debugpy",
       },
     },
+  },
+  {
+    "mfussenegger/nvim-dap",
+    config = function()
+      require "configs.dap.python"
+    end,
   },
   {
     "github/copilot.vim",
